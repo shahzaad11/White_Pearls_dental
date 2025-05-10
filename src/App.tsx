@@ -20,7 +20,6 @@ import AdminReviews from './components/admin/AdminReviews';
 import AdminAvailability from './components/admin/AdminAvailability';
 import AdminAnalytics from './components/admin/AdminAnalytics';
 import PrivateRoute from './components/admin/PrivateRoute';
-import { createClient } from '@supabase/supabase-js';
 
 function App() {
   const [showChat, setShowChat] = useState(false);
@@ -90,11 +89,5 @@ function App() {
     </Router>
   );
 }
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL!,
-  import.meta.env.VITE_SUPABASE_ANON_KEY!
-);
-
 
 export default App;
